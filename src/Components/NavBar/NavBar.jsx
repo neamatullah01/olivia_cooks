@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { BiLogIn } from "react-icons/bi";
 
 const NavBar = () => {
     const navLink = <>
@@ -7,7 +8,7 @@ const NavBar = () => {
         <li><Link className="btn btn-outline" to="/">Blog</Link></li>
     </>
     return (
-        <div className="navbar bg-[#93B1A6]  md:h-28">
+        <div className="navbar bg-[#93B1A6] h-16 md:h-28 w-[425px] md:w-full">
             <div className="navbar-start">
                 <div className="dropdown">
                     <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -26,8 +27,8 @@ const NavBar = () => {
             <div className="navbar-center h-10 md:h-28">
                 <img className="w-16 md:w-32 md:h-full" src={`https://i.ibb.co/XF3Y6xF/canva-modern-restaurant-bar-and-grill-food-logo-q-G0-Jgcwrq-HQ-removebg-preview.png`} alt="" />
             </div>
-            <div className="navbar-end pr-6">
-                <a className="btn border border-black">Login</a>
+            <div className="navbar-end md:pr-6">
+                <a className="btn border border-black">Login <BiLogIn className="text-xl"></BiLogIn></a>
             </div>
         </div>
     );
