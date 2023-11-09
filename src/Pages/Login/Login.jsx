@@ -1,6 +1,33 @@
+import { useContext } from "react";
 import { Link } from "react-router-dom";
+import { BiLogoGoogle } from "react-icons/bi";
+import { AuthContext } from "../../Provider/AuthProvider/AuthProvider";
 
 const Login = () => {
+
+    const { signIn, googleSignIn } = useContext(AuthContext);
+
+    const handleLogin = e => {
+        e.preventDefault();
+        const form = e.target;
+        const email = form.email.value;
+        const password = form.password.value;
+        console.log(email, password)
+        signIn(email, password)
+            .then(res => {
+                console.log(res);
+            })
+            .catch(error => {
+                console.log(error);
+            })
+
+    }
+    const handleGoogleSignIn = () =>{
+        googleSignIn()
+        .then()
+        .catch()
+    }
+
     return (
         <div className="hero min-h-screen">
             <div className="hero-content flex-col lg:flex-row">
@@ -10,7 +37,7 @@ const Login = () => {
                 <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-[#93B1A6] border border-black">
                     <div className="card-body">
                         <h1 className="text-3xl text-center font-bold">Login</h1>
-                        <form>
+                        <form onSubmit={handleLogin}>
                             <div className="form-control">
                                 <label className="label">
                                     <span className="label-text">Email</span>
@@ -21,7 +48,7 @@ const Login = () => {
                                 <label className="label">
                                     <span className="label-text">Password</span>
                                 </label>
-                                <input type="password" name='Password' placeholder="password" className="input input-bordered" />
+                                <input type="password" name='password' placeholder="Password" className="input input-bordered" />
                                 <label className="label">
                                     <a href="#" className="label-text-alt link link-hover">Forgot password?</a>
                                 </label>
@@ -32,8 +59,8 @@ const Login = () => {
                         </form>
                         <p className='my-4'>Do not have an account? <Link className='text-orange-600 font-bold' to="/register">Sign Up</Link> </p>
                         <div>
-                                <button className="btn btn-neutral w-full">Login With Google</button>
-                         </div>
+                            <button onClick={handleGoogleSignIn} className="btn btn-neutral w-full">Login With Google <BiLogoGoogle></BiLogoGoogle></button>
+                        </div>
                     </div>
                 </div>
             </div>

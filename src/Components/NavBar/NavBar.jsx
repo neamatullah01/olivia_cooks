@@ -1,7 +1,18 @@
 import { Link } from "react-router-dom";
-import { BiLogIn } from "react-icons/bi";
+import { BiLogIn, BiLogOut } from "react-icons/bi";
+import { useContext } from "react";
+import { AuthContext } from "../../Provider/AuthProvider/AuthProvider";
 
 const NavBar = () => {
+
+    const {user, logOut} = useContext(AuthContext);
+
+    const handleLogOut = () =>{
+        logOut()
+        .then()
+        .catch()
+    }
+
     const navLink = <>
         <li><Link className="btn btn-outline" to="/">Home</Link></li>
         <li><Link className="btn btn-outline" to="/allFood">All Food Items</Link></li>
@@ -28,7 +39,12 @@ const NavBar = () => {
                 <img className="w-16 md:w-32 md:h-full" src={`https://i.ibb.co/XF3Y6xF/canva-modern-restaurant-bar-and-grill-food-logo-q-G0-Jgcwrq-HQ-removebg-preview.png`} alt="" />
             </div>
             <div className="navbar-end md:pr-6">
-                <Link to="/login" className="btn border border-black">Login <BiLogIn className="text-xl"></BiLogIn></Link>
+                {
+                    user?
+                    <button onClick={handleLogOut} className="btn border border-black">Logout <BiLogOut className="text-xl"></BiLogOut></button>
+                    :
+                    <Link to="/login" className="btn border border-black">Login <BiLogIn className="text-xl"></BiLogIn></Link>
+                }
             </div>
         </div>
     );
