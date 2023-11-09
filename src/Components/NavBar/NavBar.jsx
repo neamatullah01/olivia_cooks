@@ -4,7 +4,7 @@ import { BiLogIn } from "react-icons/bi";
 const NavBar = () => {
     const navLink = <>
         <li><Link className="btn btn-outline" to="/">Home</Link></li>
-        <li><Link className="btn btn-outline" to="/">All Food Items</Link></li>
+        <li><Link className="btn btn-outline" to="/allFood">All Food Items</Link></li>
         <li><Link className="btn btn-outline" to="/blog">Blog</Link></li>
     </>
     return (
