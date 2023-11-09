@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 const TopFood = () => {
     const [topFoods, setTopFoods] = useState([]);
@@ -31,7 +32,7 @@ const TopFood = () => {
                 }
             </div>
             <div className="flex justify-center pt-6">
-                <button className="btn btn-primary bg-yellow-400 text-black">See All Food</button>
+                <Link to="/allFood" className="btn btn-primary bg-yellow-400 text-black">See All Food</Link>
             </div>
         </div>
     );

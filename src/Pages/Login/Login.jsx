@@ -2,6 +2,7 @@ import { useContext } from "react";
 import { Link } from "react-router-dom";
 import { BiLogoGoogle } from "react-icons/bi";
 import { AuthContext } from "../../Provider/AuthProvider/AuthProvider";
+import toast from "react-hot-toast";
 
 const Login = () => {
 
@@ -14,18 +15,23 @@ const Login = () => {
         const password = form.password.value;
         console.log(email, password)
         signIn(email, password)
-            .then(res => {
-                console.log(res);
+            .then(() => {
+                toast.success('Successfully Login');
             })
             .catch(error => {
                 console.log(error);
+                toast.error(error.message);
             })
 
     }
     const handleGoogleSignIn = () =>{
         googleSignIn()
-        .then()
-        .catch()
+        .then(()=>{
+            toast.success('Successfully Login');
+        })
+        .catch(error =>{
+            toast.error(error.message);
+        })
     }
 
     return (

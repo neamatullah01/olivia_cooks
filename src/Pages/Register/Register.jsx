@@ -1,6 +1,7 @@
 import { useContext } from "react";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../../Provider/AuthProvider/AuthProvider";
+import toast from "react-hot-toast";
 
 const Register = () => {
 
@@ -18,9 +19,11 @@ const Register = () => {
         createUser(email, password)
         .then(res=>{
             console.log(res);
+            toast.success('Successfully Sign Up');
         })
         .catch(error =>{
             console.log(error);
+            toast.error(error.message)
         })
 
     }
