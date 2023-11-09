@@ -5,7 +5,7 @@ const NavBar = () => {
     const navLink = <>
         <li><Link className="btn btn-outline" to="/">Home</Link></li>
         <li><Link className="btn btn-outline" to="/">All Food Items</Link></li>
-        <li><Link className="btn btn-outline" to="/">Blog</Link></li>
+        <li><Link className="btn btn-outline" to="/blog">Blog</Link></li>
     </>
     return (
         <div className="navbar bg-[#93B1A6] h-16 md:h-28 w-[425px] md:w-full">
