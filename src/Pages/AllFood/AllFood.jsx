@@ -11,14 +11,14 @@ const AllFood = () => {
     const pages = [...Array(numberOfPages).keys()]
 
     useEffect(() => {
-        fetch('http://localhost:5000/foodsCount')
+        fetch('https://assignment-11-server-chi-virid.vercel.app/foodsCount')
             .then(res => res.json())
             .then(data => setCount(data.count))
     }, [])
 
     
     useEffect(() => {
-        fetch(`http://localhost:5000/allFoods?page=${currentPage}&size=${itemsPerPage}`)
+        fetch(`https://assignment-11-server-chi-virid.vercel.app/allFoods?page=${currentPage}&size=${itemsPerPage}`)
             .then(res => res.json())
             .then(data => setAllFoods(data))
     }, [currentPage, itemsPerPage]);

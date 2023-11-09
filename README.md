@@ -1,8 +1,8 @@
-# React + Vite
+>Project Name: Olivia Cooks
+>Live Link:
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+>Projects main features:
+>1.Login with email and password and google also
+>2.We can see top foods item
+>3.We can also see all food item using react route
+>4.Use of pagination we can see page by page
