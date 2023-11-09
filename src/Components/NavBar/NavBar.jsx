@@ -28,7 +28,7 @@ const NavBar = () => {
                 <img className="w-16 md:w-32 md:h-full" src={`https://i.ibb.co/XF3Y6xF/canva-modern-restaurant-bar-and-grill-food-logo-q-G0-Jgcwrq-HQ-removebg-preview.png`} alt="" />
             </div>
             <div className="navbar-end md:pr-6">
-                <a className="btn border border-black">Login <BiLogIn className="text-xl"></BiLogIn></a>
+                <Link to="/login" className="btn border border-black">Login <BiLogIn className="text-xl"></BiLogIn></Link>
             </div>
         </div>
     );
