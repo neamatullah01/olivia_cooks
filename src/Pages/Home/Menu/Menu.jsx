@@ -4,7 +4,7 @@ const Menu = () => {
         <div className="py-6">
             <h2 className="text-center text-2xl font-semibold">OUR MENU</h2>
             <div className="divider w-1/5 mx-auto"></div>
-            <div className="w-1/2 mx-auto">
+            <div className="w-1/2 mx-auto mb-4">
                 <p className="text-center">Discover a world of delectable dishes meticulously prepared to tantalize your taste buds. Our menu showcases a symphony of flavors, from appetizing starters to mouthwatering mains and irresistible desserts. Join us in a culinary journey that promises an unforgettable dining experience. Let your senses rejoice in every bite, and relish the art of exceptional cuisine.</p>
             </div>
             <div>

@@ -7,6 +7,7 @@ import toast from "react-hot-toast";
 const Login = () => {
 
     const { signIn, googleSignIn } = useContext(AuthContext);
+    
 
     const handleLogin = e => {
         e.preventDefault();

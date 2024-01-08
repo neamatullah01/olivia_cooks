@@ -2,13 +2,13 @@ import { AiOutlineFacebook, AiOutlineInstagram, AiOutlineTwitter } from "react-i
 
 const Chef = () => {
     return (
-        <div className="py-5">
+        <div className="py-6 mt-4">
             <h2 className="text-center text-2xl font-semibold">OUR GREAT CHEFS</h2>
             <div className="divider w-1/5 mx-auto"></div>
             <div className="w-1/2 mx-auto">
                 <p className="text-center">Our chefs are the wizards behind the delicious spells on your plate. They bring together expertise and imagination to craft culinary wonders that leave a lasting impression. With every dish, they infuse passion and precision, turning ingredients into works of art. Experience their culinary magic, and let your taste buds dance to their symphony of flavors.</p>
             </div>
-            <div className="flex justify-evenly items-center pt-6">
+            <div className="flex justify-evenly items-center mt-6">
                 <div>
                     <div className="avatar">
                         <div className="w-56 rounded-full ring ring-neutral ring-offset-black ring-offset-1">

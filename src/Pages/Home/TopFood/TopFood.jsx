@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 const TopFood = () => {
     const [topFoods, setTopFoods] = useState([]);
     useEffect(() => {
-        fetch('https://assignment-11-server-chi-virid.vercel.app/topFoods')
+        fetch('http://localhost:5000/topFoods')
             .then(res => res.json())
             .then(data => {
                 setTopFoods(data);

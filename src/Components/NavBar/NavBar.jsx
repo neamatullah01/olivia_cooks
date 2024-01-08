@@ -41,7 +41,10 @@ const NavBar = () => {
             <div className="navbar-end md:pr-6">
                 {
                     user?
+                    <>
+                    <img className="w-12 mask mask-squircle mr-4" src={user?.photoURL} alt="" />
                     <button onClick={handleLogOut} className="btn border border-black">Logout <BiLogOut className="text-xl"></BiLogOut></button>
+                    </>
                     :
                     <Link to="/login" className="btn border border-black">Login <BiLogIn className="text-xl"></BiLogIn></Link>
                 }
