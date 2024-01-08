@@ -1,4 +1,5 @@
 import { BiRightArrow, BiLeftArrow } from "react-icons/bi";
+import { Link } from "react-router-dom";
 
 const Banner = () => {
     return (
@@ -12,7 +13,7 @@ const Banner = () => {
                             <h2 className='text-lg md:text-6xl font-bold text-[#93B1A6]'>Indulge in Culinary Delights</h2>
                             <p className="text-slate-400 text-xs md:text-base">Welcome to a world of exquisite flavors and unforgettable dining experiences. Our restaurant is a haven for food enthusiasts, where every dish is a masterpiece crafted with passion. Join us for a journey through taste, where each bite tells a unique story. Explore our menu and savor the magic of culinary artistry.</p>
                             <div>
-                                <button className="btn btn-outline btn-warning">Menus</button>
+                                <Link to="/menu" className="btn btn-outline btn-warning">Menus</Link>
                             </div>
                         </div>
                     </div>
@@ -28,7 +29,7 @@ const Banner = () => {
                             <h2 className='text-6xl font-bold text-[#93B1A6]'>Indulge in Culinary Delights</h2>
                             <p className="text-slate-400">Welcome to a world of exquisite flavors and unforgettable dining experiences. Our restaurant is a haven for food enthusiasts, where every dish is a masterpiece crafted with passion. Join us for a journey through taste, where each bite tells a unique story. Explore our menu and savor the magic of culinary artistry.</p>
                             <div>
-                                <button className="btn btn-outline btn-warning">Menus</button>
+                                <Link to="/menu" className="btn btn-outline btn-warning">Menus</Link>
                             </div>
                         </div>
                     </div>
@@ -44,7 +45,7 @@ const Banner = () => {
                             <h2 className='text-6xl font-bold text-[#93B1A6]'>Indulge in Culinary Delights</h2>
                             <p className="text-slate-400">Welcome to a world of exquisite flavors and unforgettable dining experiences. Our restaurant is a haven for food enthusiasts, where every dish is a masterpiece crafted with passion. Join us for a journey through taste, where each bite tells a unique story. Explore our menu and savor the magic of culinary artistry.</p>
                             <div>
-                                <button className="btn btn-outline btn-warning">Menus</button>
+                                <Link to="/menu" className="btn btn-outline btn-warning">Menus</Link>
                             </div>
                         </div>
                     </div>
@@ -60,7 +61,7 @@ const Banner = () => {
                             <h2 className='text-6xl font-bold text-[#93B1A6]'>Indulge in Culinary Delights</h2>
                             <p className="text-slate-400">Welcome to a world of exquisite flavors and unforgettable dining experiences. Our restaurant is a haven for food enthusiasts, where every dish is a masterpiece crafted with passion. Join us for a journey through taste, where each bite tells a unique story. Explore our menu and savor the magic of culinary artistry.</p>
                             <div>
-                                <button className="btn btn-outline btn-warning">Menus</button>
+                                <Link to="/menu" className="btn btn-outline btn-warning">Menus</Link>
                             </div>
                         </div>
                     </div>
