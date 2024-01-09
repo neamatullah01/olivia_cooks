@@ -1,5 +1,5 @@
-import axios from "axios";
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 const AllFood = () => {
     const [allFoods, setAllFoods] = useState([]);
@@ -24,12 +24,12 @@ const AllFood = () => {
     const handleSearch = e => {
         e.preventDefault();
         const form = e.target;
-        const name = form.name.value.;
+        const name = form.name.value;
         fetch(`http://localhost:5000/food?name=${name}`)
             .then(res => res.json())
             .then(data => {
                 setFood(data),
-                setAllFoods([]);
+                    setAllFoods([]);
             }
             )
     }
@@ -66,7 +66,7 @@ const AllFood = () => {
                         <p>{food.food_category}</p>
                         <p className="text-lg text-[#892CDC] font-semibold">Price: {food?.price}$</p>
                         <div className="card-actions justify-end">
-                            <button className="btn btn-outline">Details</button>
+                            <Link to={`/singleFood/${food._id}`} className="btn btn-outline">Details</Link>
                         </div>
                     </div>
                 </div>
@@ -82,7 +82,7 @@ const AllFood = () => {
                                 <p>{food.food_category}</p>
                                 <p className="text-lg text-[#892CDC] font-semibold">Price: {food.price}$</p>
                                 <div className="card-actions justify-end">
-                                    <button className="btn btn-outline">Details</button>
+                                    <Link to={`/singleFood/${food._id}`} className="btn btn-outline">Details</Link>
                                 </div>
                             </div>
                         </div>

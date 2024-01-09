@@ -24,7 +24,7 @@ const TopFood = () => {
                                 <p>{food.food_category}</p>
                                 <p className="text-lg text-[#892CDC] font-semibold">Price: {food.price}$</p>
                                 <div className="card-actions justify-end">
-                                    <button className="btn btn-outline">Details</button>
+                                    <Link to={`/singleTopFood/${food._id}`} className="btn btn-outline">Details</Link>
                                 </div>
                             </div>
                         </div>

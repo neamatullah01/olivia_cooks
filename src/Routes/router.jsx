@@ -7,6 +7,7 @@ import Login from "../Pages/Login/Login";
 import Register from "../Pages/Register/Register";
 import AllFood from "../Pages/AllFood/AllFood";
 import Menu from "../Pages/Home/Menu/Menu";
+import SingleFood from "../Pages/SingleFood/SingleFood";
 
 const router = createBrowserRouter([
     {
@@ -37,6 +38,16 @@ const router = createBrowserRouter([
         {
           path: '/menu',
           element: <Menu></Menu>
+        },
+        {
+          path: '/singleFood/:id',
+          element: <SingleFood></SingleFood>,
+          loader: ({params})=>fetch(`http://localhost:5000/singleFood/${params.id}`)
+        },
+        {
+          path: '/singleTopFood/:id',
+          element: <SingleFood></SingleFood>,
+          loader: ({params})=>fetch(`http://localhost:5000/singleTopFood/${params.id}`)
         }
       ]
     },
